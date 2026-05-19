@@ -26,7 +26,6 @@ dist-ssr
 *.sw?
 
 _refs
-.github/scripts/
 .github/AUTO-VERSIONING-GUIDE.md
 website-data/
 composer.phar
