@@ -3,7 +3,7 @@
 Plugin Name: Nurbid Latest Post URL (NLP)
 Plugin URI: https://nurbid.com/nurbid-latest-post-url
 Description: A simple WordPress plugin that automatically sets a link's URL to the Latest blog post, simply by adding the class "nurbid-latest-post-url" to a link or button, or by inserting the shortcode "[nurbid_latest_post_url]". Keep “Read latest” CTAs current without manual edits.
-Version: 1.0.0
+Version: 1.26.0519
 Author: Nurbid - Bespoke IT Services
 Author URI: https://nurbid.com
 Text Domain: nurbid-latest-post-url
@@ -16,7 +16,7 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 defined('ABSPATH') || exit;
 
-define('NURBID_LPU_VERSION', '1.0.0');
+define('NURBID_LPU_VERSION', '1.26.0519');
 
 function nurbid_lpu_get_latest_post_url(): string {
     $recent = wp_get_recent_posts(['numberposts' => 1, 'post_status' => 'publish']);

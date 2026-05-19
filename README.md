@@ -66,7 +66,7 @@ Works in:
 
 ## Changelog
 
-### 1.0.0
+### 1.26.0519
 
 - Initial release
 
