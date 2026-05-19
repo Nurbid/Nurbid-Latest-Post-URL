@@ -38,18 +38,22 @@ plugin_text = re.sub(
 )
 plugin_file.write_text(plugin_text, encoding="utf-8")
 
-# README.md changelog (prepend newest entry under ## Changelog)
+# README.md changelog (prepend only if this version has no entry yet)
 readme = Path("README.md")
 text = readme.read_text(encoding="utf-8")
 entry = f"- {version} - {changelog_message}"
+version_line = re.compile(rf"^- {re.escape(version)} - .+$", re.MULTILINE)
 
 if not re.search(r"^## Changelog\s*$", text, flags=re.MULTILINE):
     text = text.rstrip() + "\n\n## Changelog\n\n"
 
-if entry not in text:
+if version_line.search(text):
+    print(f"README changelog: entry for {version} already exists; left unchanged.")
+else:
     text = re.sub(r"(^## Changelog\s*\n)", rf"\1{entry}\n", text, count=1, flags=re.MULTILINE)
+    print(f"README changelog: prepended entry for {version}.")
 
 readme.write_text(text, encoding="utf-8")
 PY
 
-echo "Synced version to $VERSION in VERSION, nurbid-latest-post-url.php, and README.md"
+echo "Synced version to $VERSION in VERSION and nurbid-latest-post-url.php"
