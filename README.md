@@ -66,9 +66,8 @@ Works in:
 
 ## Changelog
 
-### 1.0.0
-
-- Initial release
+- 1.26.0519 - Version number update.
+- 1.0.0 - Initial release
 
 ## License
 
