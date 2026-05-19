@@ -25,25 +25,11 @@ When the page loads:
 
 ## Install
 
-Use this folder name:
-
-```text
-wp-content/plugins/nurbid-latest-post-url/
-```
-
-WordPress loads the plugin from **`nurbid-latest-post-url.php`** in that folder.
-
 ### From GitHub Releases
 
 1. Download `nurbid-latest-post-url-x.y.z.zip` from the repository **Releases** page
 2. Go to **Plugins → Add New → Upload Plugin**
 3. Upload the zip, then click **Install Now** and **Activate**
-
-### From nurbid.com
-
-1. [Download the plugin ZIP](https://nurbid.com/nurbid-latest-post-url.zip)
-2. Go to **Plugins → Add New → Upload Plugin**
-3. Upload `nurbid-latest-post-url.zip`, then click **Install Now** and **Activate**
 
 ## Setup
 
